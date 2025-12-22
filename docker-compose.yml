@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  gateway:
+    image: amy397/gateway-service:v1
+    ports:
+      - "9091:9091"
+    environment:
+      - USER_SERVICE_URL=http://user-service:8081
+      - PRODUCT_SERVICE_URL=http://product-service:8082
+      - ORDER_SERVICE_URL=http://order-service:8083
+      - PAYMENT_SERVICE_URL=http://payment-service:8084
+
+  user-service:
+    image: amy397/user-service:v1
+    ports:
+      - "8081:8081"
+
+  product-service:
+    image: amy397/product-service:v1
+    ports:
+      - "8082:8082"
+
+  order-service:
+    image: amy397/order-service:v1
+    ports:
+      - "8083:8083"
+
+  payment-service:
+    image: amy397/payment-service:v1
+    ports:
+      - "8084:8084"
