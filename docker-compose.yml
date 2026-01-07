@@ -9,7 +9,7 @@ services:
       - USER_SERVICE_URL=http://user-service:8081
       - PRODUCT_SERVICE_URL=http://product-service:8082
       - ORDER_SERVICE_URL=http://order-service:8083
-      - PAYMENT_SERVICE_URL=http://payment-service:8084
+      - PAYMENT_SERVICE_URL=http://payment-service:8085
 
   user-service:
     image: amy397/user-service:v1
